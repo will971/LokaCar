@@ -7,18 +7,20 @@ public class User {
     private String prenom;
     private String mdp;
     private Agence agence;
+    private String mail;
 
 
     public User() {
         super();
     }
 
-    public User(int id, String nom, String prenom, String mdp, Agence agence) {
+    public User(int id, String nom, String prenom, String mdp, Agence agence, String mail) {
         this.id = id;
         Nom = nom;
         this.prenom = prenom;
         this.mdp = mdp;
         this.agence = agence;
+        this.mail = mail;
     }
 
     public int getId() {
@@ -59,5 +61,25 @@ public class User {
 
     public void setAgence(Agence agence) {
         this.agence = agence;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", Nom='" + Nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", mdp='" + mdp + '\'' +
+                ", agence=" + agence +
+                ", mail='" + mail + '\'' +
+                '}';
     }
 }
