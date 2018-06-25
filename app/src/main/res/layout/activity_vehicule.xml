@@ -6,18 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Activity.VehiculeActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/liste_véhicule"
+        android:layout_width="match_parent"
         android:layout_height="460dp"
-        android:layout_marginBottom="24dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029"></LinearLayout>
+        />
 
     <Button
         android:id="@+id/button2"
@@ -28,6 +21,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/liste_véhicule"
         app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

@@ -18,10 +18,9 @@
         </activity>
         <activity android:name=".Activity.MenuActivity" />
         <activity android:name=".Activity.VehiculeActivity" />
-        <activity android:name=".Activity.LocationActivity"></activity>
-        <activity android:name=".Activity.MenuActivity" />
+        <activity android:name=".Activity.LocationActivity" />
         <activity android:name=".Activity.ClientActivity" />
-        <activity android:name=".Activity.CAActivity"></activity>
+        <activity android:name=".Activity.CAActivity" />
     </application>
 
 </manifest>
