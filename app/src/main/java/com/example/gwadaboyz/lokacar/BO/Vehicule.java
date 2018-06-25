@@ -8,6 +8,7 @@ public class Vehicule {
     private boolean statut;
     private int prix;
     private Agence agence;
+    private String modele;
 
 
     public int getId() {
@@ -61,13 +62,22 @@ public class Vehicule {
     public Vehicule() {
     }
 
-    public Vehicule(int id, String marque, String imamatriculation, boolean statut, int prix, Agence agence) {
+    public String getModele() {
+        return modele;
+    }
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
+    public Vehicule(int id, String marque, String imamatriculation, boolean statut, int prix, Agence agence, String modele) {
         this.id = id;
         this.marque = marque;
         this.imamatriculation = imamatriculation;
         this.statut = statut;
         this.prix = prix;
         this.agence = agence;
+        this.modele = modele;
     }
 
     @Override
@@ -79,6 +89,7 @@ public class Vehicule {
                 ", statut=" + statut +
                 ", prix=" + prix +
                 ", agence=" + agence +
+                ", modele='" + modele + '\'' +
                 '}';
     }
 }
