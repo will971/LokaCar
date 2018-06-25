@@ -28,25 +28,28 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Consulter la liste des véhicules"
-            />
+            android:onClick="clickVehicule"/>
 
         <TextView
             android:id="@+id/a2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Consulter la liste des locations" />
+            android:text="Consulter la liste des locations"
+            android:onClick="clickLocation"/>
 
         <TextView
             android:id="@+id/a3"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Consulter la liste des clients" />
+            android:text="Consulter la liste des clients"
+            android:onClick="clickClient"/>
 
         <TextView
             android:id="@+id/a4"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Consulter le chiffre d'affaire" />
+            android:text="Consulter le chiffre d'affaire"
+            android:onClick="clickCA"/>
     </LinearLayout>
 
     <Button
