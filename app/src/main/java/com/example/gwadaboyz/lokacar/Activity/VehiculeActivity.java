@@ -30,11 +30,19 @@ public class VehiculeActivity extends AppCompatActivity {
         Vehicule v2 = new Vehicule();
 
         v1.setMarque("seat");
-        v1.setModele("q2");
+        v1.setModele("Leon");
+
+        v2.setMarque("audi");
+        v2.setModele("A3");
+
+        v3.setMarque("BMW");
+        v3.setModele("M2");
 
 
         List<Vehicule> listVehicule = new ArrayList<>();
         listVehicule.add(v1);
+        listVehicule.add(v2);
+        listVehicule.add(v3);
 
         VehiculeAdapter vehiculeAdapter = new VehiculeAdapter((listVehicule));
         recyclerView.setAdapter(vehiculeAdapter);

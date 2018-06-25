@@ -8,7 +8,7 @@ public class Location {
     private Vehicule vehicule;
     private Date date_début;
     private Date date_fin;
-    private String montant;
+    private int montant;
     private boolean rendu;
 
 
@@ -18,7 +18,7 @@ public class Location {
     {
     }
 
-    public Location(int id, Client client, Vehicule vehicule, Date date_début, Date date_fin, String montant, boolean rendu) {
+    public Location(int id, Client client, Vehicule vehicule, Date date_début, Date date_fin, int montant, boolean rendu) {
         this.id = id;
         this.client = client;
         this.vehicule = vehicule;
@@ -51,7 +51,7 @@ public class Location {
         return date_fin;
     }
 
-    public String getMontant() {
+    public int getMontant() {
         return montant;
     }
 
@@ -79,7 +79,7 @@ public class Location {
         this.date_fin = date_fin;
     }
 
-    public void setMontant(String montant) {
+    public void setMontant(int montant) {
         this.montant = montant;
     }
 
