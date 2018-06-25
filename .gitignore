@@ -74,3 +74,4 @@ captures/
 /build
 /captures
 .externalNativeBuild
+/.idea/*
