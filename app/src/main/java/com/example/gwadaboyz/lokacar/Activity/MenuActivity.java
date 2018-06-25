@@ -1,7 +1,9 @@
-package com.example.gwadaboyz.lokacar;
+package com.example.gwadaboyz.lokacar.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.gwadaboyz.lokacar.R;
 
 public class MenuActivity extends AppCompatActivity {
 
