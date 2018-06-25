@@ -78,4 +78,36 @@ public class Client {
     {
         return mail;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public void setRue(String rue) {
+        this.rue = rue;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public void setCodePostal(String codePostal) {
+        this.codePostal = codePostal;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
 }
