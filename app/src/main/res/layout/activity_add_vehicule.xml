@@ -113,15 +113,12 @@
 
     <Switch
         android:id="@+id/switch1"
-        style="@android:style/Widget.Holo.Light.CompoundButton.Switch"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="28dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:checked="false"
         android:showText="true"
-        android:switchTextAppearance="@style/TextAppearance.AppCompat.Caption"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textOff="loué"
         android:textOn="Disponible"
         app:layout_constraintEnd_toEndOf="parent"
