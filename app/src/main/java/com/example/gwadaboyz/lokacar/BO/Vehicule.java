@@ -70,7 +70,8 @@ public class Vehicule {
         this.modele = modele;
     }
 
-    public Vehicule(int id, String marque, String imamatriculation, boolean statut, int prix, Agence agence, String modele) {
+    public Vehicule(int id, String marque, String imamatriculation, boolean statut,
+                    int prix, Agence agence, String modele) {
         this.id = id;
         this.marque = marque;
         this.imamatriculation = imamatriculation;
