@@ -33,8 +33,9 @@
         <activity
             android:name=".activity.AddVehiculeActivity"
             android:parentActivityName=".activity.VehiculeActivity" />
-        <activity android:name=".activity.AddLocationActivity"
-            android:parentActivityName=".activity.LocationActivity"></activity>
+        <activity
+            android:name=".activity.AddLocationActivity"
+            android:parentActivityName=".activity.LocationActivity" />
     </application>
 
 </manifest>
