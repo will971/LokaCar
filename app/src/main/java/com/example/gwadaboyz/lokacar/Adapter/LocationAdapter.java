@@ -30,7 +30,8 @@ public LocationAdapter(List<Location> locations){
     public void onBindViewHolder(@NonNull LocationViewHolder holder, int position) {
 
     String montant = ""+locations.get(position).getMontant();
-holder.textViewID.setText(locations.get(position).getId());
+    String id=""+locations.get(position).getId();
+holder.textViewID.setText(id);
 holder.textViewClient.setText(locations.get(position).getClient().getNom());
 holder.textViewVehicule.setText(locations.get(position).getVehicule().getModele());
 holder.textViewMontant.setText(montant);
