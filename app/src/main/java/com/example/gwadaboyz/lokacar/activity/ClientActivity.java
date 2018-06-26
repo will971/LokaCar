@@ -1,12 +1,12 @@
-package com.example.gwadaboyz.lokacar.Activity;
+package com.example.gwadaboyz.lokacar.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.gwadaboyz.lokacar.Adapter.ClientAdapter;
-import com.example.gwadaboyz.lokacar.BO.Client;
+import com.example.gwadaboyz.lokacar.adapter.ClientAdapter;
+import com.example.gwadaboyz.lokacar.bo.Client;
 import com.example.gwadaboyz.lokacar.R;
 
 import java.util.ArrayList;

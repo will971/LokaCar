@@ -1,14 +1,13 @@
-package com.example.gwadaboyz.lokacar.Adapter;
+package com.example.gwadaboyz.lokacar.adapter;
 
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.gwadaboyz.lokacar.BO.Vehicule;
+import com.example.gwadaboyz.lokacar.bo.Vehicule;
 import com.example.gwadaboyz.lokacar.R;
-import com.example.gwadaboyz.lokacar.ViewHolder.VehiculeViewHolder;
+import com.example.gwadaboyz.lokacar.viewholder.VehiculeViewHolder;
 
 import java.util.List;
 

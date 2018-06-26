@@ -1,4 +1,4 @@
-package com.example.gwadaboyz.lokacar.BO;
+package com.example.gwadaboyz.lokacar.bo;
 
 import java.util.Date;
 

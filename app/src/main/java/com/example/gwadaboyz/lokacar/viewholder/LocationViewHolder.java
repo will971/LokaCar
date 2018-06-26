@@ -1,4 +1,4 @@
-package com.example.gwadaboyz.lokacar.ViewHolder;
+package com.example.gwadaboyz.lokacar.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

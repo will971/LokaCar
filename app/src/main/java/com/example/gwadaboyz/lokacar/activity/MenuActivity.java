@@ -1,4 +1,4 @@
-package com.example.gwadaboyz.lokacar.Activity;
+package com.example.gwadaboyz.lokacar.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
