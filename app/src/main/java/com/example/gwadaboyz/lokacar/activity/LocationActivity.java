@@ -1,9 +1,11 @@
 package com.example.gwadaboyz.lokacar.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.example.gwadaboyz.lokacar.adapter.LocationAdapter;
 import com.example.gwadaboyz.lokacar.bo.Client;
@@ -84,5 +86,10 @@ public class LocationActivity extends AppCompatActivity {
         locations.add(l2);
         LocationAdapter ladapter = new LocationAdapter(locations);
         rcv.setAdapter(ladapter);
+    }
+
+    public void OnClickAddLocation(View view){
+        Intent intent = new Intent(this, AddLocationActivity.class);
+        startActivity(intent);
     }
 }

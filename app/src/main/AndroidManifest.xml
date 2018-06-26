@@ -30,8 +30,10 @@
             android:name=".activity.CAActivity"
             android:parentActivityName=".activity.MenuActivity" />
         <activity android:name=".activity.AddClientActivity" />
-        <activity android:name=".activity.AddVehiculeActivity"
-            android:parentActivityName=".activity.VehiculeActivity"></activity>
+        <activity
+            android:name=".activity.AddVehiculeActivity"
+            android:parentActivityName=".activity.VehiculeActivity" />
+        <activity android:name=".activity.AddLocationActivity"></activity>
     </application>
 
 </manifest>
