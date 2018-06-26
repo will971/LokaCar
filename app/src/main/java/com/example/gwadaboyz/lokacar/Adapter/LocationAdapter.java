@@ -28,10 +28,12 @@ public LocationAdapter(List<Location> locations){
 
     @Override
     public void onBindViewHolder(@NonNull LocationViewHolder holder, int position) {
+
+    String montant = ""+locations.get(position).getMontant();
 holder.textViewID.setText(locations.get(position).getId());
 holder.textViewClient.setText(locations.get(position).getClient().getNom());
 holder.textViewVehicule.setText(locations.get(position).getVehicule().getModele());
-holder.textViewMontant.setText(locations.get(position).getMontant());
+holder.textViewMontant.setText(montant);
     }
 
     @Override
