@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "10102680929",
+    "firebase_url": "https://lokacar-f3b7d.firebaseio.com",
+    "project_id": "lokacar-f3b7d",
+    "storage_bucket": "lokacar-f3b7d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10102680929:android:099a7fb654a2817e",
+        "android_client_info": {
+          "package_name": "com.example.gwadaboyz.lokacar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10102680929-vdv8smj5t6kacfu8l42s4j442379huot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5JfsKKaO0jA5kV5UmPgmljZM_jz7_0fI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
