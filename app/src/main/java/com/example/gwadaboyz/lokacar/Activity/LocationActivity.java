@@ -28,9 +28,11 @@ public class LocationActivity extends AppCompatActivity {
         rcv.setLayoutManager(llmg);
 
         Vehicule v1= new Vehicule();
-        v1.setModele("Modèle du véhicule");
+        v1.setModele("M3 2018");
+
+
         Client c1= new Client();
-        c1.setNom("Nom du client");
+        c1.setNom("Clotaire");
         c1.setPrenom("Prenom du client");
 
         Location l1 = new Location();
