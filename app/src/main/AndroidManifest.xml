@@ -16,12 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MenuActivity"/>
-
-        <activity android:name=".activity.VehiculeActivity" android:parentActivityName=".activity.MenuActivity"/>
-        <activity android:name=".activity.LocationActivity" android:parentActivityName=".activity.MenuActivity"/>
-        <activity android:name=".activity.ClientActivity" android:parentActivityName=".activity.MenuActivity"/>
-        <activity android:name=".activity.CAActivity" android:parentActivityName=".activity.MenuActivity"/>
+        <activity android:name=".activity.MenuActivity" />
+        <activity
+            android:name=".activity.VehiculeActivity"
+            android:parentActivityName=".activity.MenuActivity" />
+        <activity
+            android:name=".activity.LocationActivity"
+            android:parentActivityName=".activity.MenuActivity" />
+        <activity
+            android:name=".activity.ClientActivity"
+            android:parentActivityName=".activity.MenuActivity" />
+        <activity
+            android:name=".activity.CAActivity"
+            android:parentActivityName=".activity.MenuActivity" />
+        <activity android:name=".activity.AddClientActivity" />
+        <activity android:name=".activity.AddVehiculeActivity"></activity>
     </application>
 
 </manifest>

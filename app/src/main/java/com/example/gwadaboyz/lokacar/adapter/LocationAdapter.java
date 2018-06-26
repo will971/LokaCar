@@ -18,8 +18,9 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationViewHolder> {
 public LocationAdapter(List<Location> locations){
     this.locations=locations;
 }
-    @Override
-    public LocationViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+@Override
+    public LocationViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
        View viewLocation = LayoutInflater.from(parent.getContext()).inflate(R.layout.liste_item_location, parent, false);
 
         return new LocationViewHolder(viewLocation);

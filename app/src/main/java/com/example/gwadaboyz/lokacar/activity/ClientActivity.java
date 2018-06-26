@@ -1,9 +1,11 @@
 package com.example.gwadaboyz.lokacar.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.example.gwadaboyz.lokacar.adapter.ClientAdapter;
 import com.example.gwadaboyz.lokacar.bo.Client;
@@ -35,5 +37,9 @@ public class ClientActivity extends AppCompatActivity {
 rcv.setAdapter(cAdapter);
 
 
+    }
+    public void OnClickAddClient(View view){
+        Intent intent = new Intent(this, AddClientActivity.class);
+        startActivity(intent);
     }
 }

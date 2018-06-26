@@ -68,12 +68,14 @@ public class LocationActivity extends AppCompatActivity {
         l1.setId(1);
         l1.setMontant(500);
         l1.setVehicule(v1);
+        l1.setRendu(true);
 
         Location l2 = new Location();
         l2.setClient(c2);
         l2.setId(2);
         l2.setMontant(500);
         l2.setVehicule(v2);
+        l2.setRendu(false);
 
 
 
