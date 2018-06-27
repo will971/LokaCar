@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public void addAgence()
     {
         //CollectionReference agences = db.collection("Agence");
-        CollectionReference agences = db.collection("Agence");
+        CollectionReference agences = db.collection("Agences");
 
         Map<String,Object> agence1 = new ArrayMap<>();
         agence1.put("nom","St-Herblain");
@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
     }*/
 public void addVehicule() {
-    CollectionReference cars = db.collection("Agence")
-            .document("A1").collection("Vehicule");
+    CollectionReference cars = db.collection("Agences")
+            .document("A1").collection("Vehicules");
 
         Map<String,Object> car = new ArrayMap<>();
         car.put("Marque","BMW");
@@ -103,7 +103,7 @@ public void addVehicule() {
     cars.document("V2").set(car2);
 }
     public void addClient(){
-        CollectionReference clients = db.collection("Agence").document("A1")
+        CollectionReference clients = db.collection("Agences").document("A1")
                 .collection("Clients");
         Map<String,Object> client = new ArrayMap<>();
         client.put("nom","Donald");
