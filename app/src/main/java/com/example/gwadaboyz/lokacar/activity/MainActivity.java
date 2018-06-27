@@ -40,8 +40,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void addAgence()
-    {
+
+
+    /*public void addUser(){
+      // CollectionReference users = db.collection("Agence").document("A1").collection("user");
+       CollectionReference users=db.collection("User");
+        Map<String, Object> user= new ArrayMap<>();
+        user.put("nom", "Gerant1");
+        user.put("prenom", "test");
+        user.put("mot de passe", "test");
+        user.put("mail", "test@test.fr");
+
+
+
+    }*/
+    public void addAgence(){
         //CollectionReference agences = db.collection("Agence");
         CollectionReference agences = db.collection("Agences");
 
@@ -69,20 +82,7 @@ public class MainActivity extends AppCompatActivity {
         agence4.put("siret","654656-56566262-626262");
         agences.document("A4").set(agence4);
     }
-
-    /*public void addUser(){
-      // CollectionReference users = db.collection("Agence").document("A1").collection("user");
-       CollectionReference users=db.collection("User");
-        Map<String, Object> user= new ArrayMap<>();
-        user.put("nom", "Gerant1");
-        user.put("prenom", "test");
-        user.put("mot de passe", "test");
-        user.put("mail", "test@test.fr");
-
-
-
-    }*/
-public void addVehicule() {
+    public void addVehicule() {
     CollectionReference cars = db.collection("Agences")
             .document("A1").collection("Vehicules");
 
@@ -126,10 +126,7 @@ public void addVehicule() {
         client2.put("mail","JeanValJean@gmail.com");
         clients.document("Client2").set(client2);
     }
-
-
-    public void getListeUser()
-    {
+    public void getListeUser(){
         db.collection("User").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
