@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.gwadaboyz.lokacar.R;
 import com.example.gwadaboyz.lokacar.bo.Agence;
+import com.example.gwadaboyz.lokacar.bo.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
@@ -79,27 +80,44 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
 
+    }
+public void addVehicule(){
+        CollectionReference cars = db.collection("User")
+                .document("User1").collection("Agence")
+                .document("A1").collection("Vehicule");
+
+        Map<String,Object> car = new ArrayMap<>();
+        car.put("Marque","BMW");
+        car.put("Modele","M3");
+        car.put("Immatriculation","EZ-501-AB");
+        car.put("kilometrage",50000);
+        car.put("Disponible", false);
+        cars.document("V1").set(car);
+}
 
 
     public void getListeAgence()
     {
-        db.collection("Agence").get()
+        db.collection("User").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         if(queryDocumentSnapshots.isEmpty())
                         {
+
+                            addVehicule();
+
                             addAgence();
-                            getListeAgence();
                             addUser();
+
+                            getListeAgence();
                         }else
                         {
-                            List<Agence> listAgence = queryDocumentSnapshots.toObjects(Agence.class);
-                            listAgence.addAll(listAgence);
+                            List<User> listUser = queryDocumentSnapshots.toObjects(User.class);
+                            listUser.addAll(listUser);
                             Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
-                            Log.i("listeAgnce", "onSuccess: "+listAgence);
+                            Log.i("listeUser", "onSuccess: "+listUser);
                         }
 
                     }
