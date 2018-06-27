@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "10102680929-a31n1v28eds5rg3dpk8g4rook6hls1la.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gwadaboyz.lokacar",
+            "certificate_hash": "6bdbe0f2b3c215ec0c4f134371ca491fe9fc9466"
+          }
+        },
+        {
           "client_id": "10102680929-vdv8smj5t6kacfu8l42s4j442379huot.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10102680929-vdv8smj5t6kacfu8l42s4j442379huot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
