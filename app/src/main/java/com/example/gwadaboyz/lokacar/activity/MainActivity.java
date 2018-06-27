@@ -43,31 +43,40 @@ public class MainActivity extends AppCompatActivity {
     public void addAgence()
     {
         //CollectionReference agences = db.collection("Agence");
-        CollectionReference agences = db.collection("User").document("User1").collection("Agence");
+        CollectionReference agences = db.collection("User");
 
         Map<String,Object> agence1 = new ArrayMap<>();
         agence1.put("nom","St-Herblain");
         agence1.put("adresse","123 rue moile 44200 St-Herblain");
         agence1.put("siret","456882-5558-255-5");
-        agences.document("A1").set(agence1);
 
-        /*Map<String,Object> agence2 = new ArrayMap<>();
+
+        Map<String,Object> agence2 = new ArrayMap<>();
         agence2.put("nom","Orvault");
         agence2.put("adresse","52 rue poil 44300 NANTES");
         agence2.put("siret","55-555656595-22626262-162");
-        agences.document("A2").set(agence2);
+
 
         Map<String,Object> agence3 = new ArrayMap<>();
         agence3.put("nom","Nantes");
         agence3.put("adresse","233 rue lomp 44000 NANTES");
         agence3.put("siret","5555-555-55-555225-2");
-        agences.document("A3").set(agence3);
+
 
         Map<String,Object> agence4 = new ArrayMap<>();
         agence4.put("nom","Guadeloupe");
         agence4.put("adresse","36 rue dela 97100 Guadeloupe");
         agence4.put("siret","654656-56566262-626262");
-        agences.document("A4").set(agence4);*/
+
+        agences.document("User1").collection("Agence")
+                .document("A1").set(agence1);
+        agences.document("User2").collection("Agence")
+                .document("A2").set(agence2);
+        agences.document("User3").collection("Agence")
+                .document("A3").set(agence3);
+        agences.document("User4").collection("Agence")
+                .document("A4").set(agence4);
+
     }
     public void addUser(){
       // CollectionReference users = db.collection("Agence").document("A1").collection("user");
@@ -94,6 +103,14 @@ public void addVehicule(){
         car.put("kilometrage",50000);
         car.put("Disponible", false);
         cars.document("V1").set(car);
+
+    Map<String,Object> car2 = new ArrayMap<>();
+    car2.put("Marque","Audi");
+    car2.put("Modele","RS3");
+    car2.put("Immatriculation","EG-501-AB");
+    car2.put("kilometrage",75000);
+    car2.put("Disponible", true);
+    cars.document("V2").set(car2);
 }
 
 
@@ -105,13 +122,14 @@ public void addVehicule(){
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         if(queryDocumentSnapshots.isEmpty())
                         {
-
+                            addUser();
+                            addAgence();
                             addVehicule();
 
-                            addAgence();
-                            addUser();
 
-                            getListeAgence();
+
+
+
                         }else
                         {
                             List<User> listUser = queryDocumentSnapshots.toObjects(User.class);
@@ -131,5 +149,7 @@ public void addVehicule(){
                     }
                 });
     }
+
+    
 
 }
