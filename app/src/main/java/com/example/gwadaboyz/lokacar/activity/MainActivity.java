@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void addAgence()
     {
-        CollectionReference agences = db.collection("Agence");
+        //CollectionReference agences = db.collection("Agence");
+        CollectionReference agences = db.collection("User").document("User1").collection("Agence");
 
         Map<String,Object> agence1 = new ArrayMap<>();
         agence1.put("nom","St-Herblain");
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         agence1.put("siret","456882-5558-255-5");
         agences.document("A1").set(agence1);
 
-        Map<String,Object> agence2 = new ArrayMap<>();
+        /*Map<String,Object> agence2 = new ArrayMap<>();
         agence2.put("nom","Orvault");
         agence2.put("adresse","52 rue poil 44300 NANTES");
         agence2.put("siret","55-555656595-22626262-162");
@@ -65,17 +66,18 @@ public class MainActivity extends AppCompatActivity {
         agence4.put("nom","Guadeloupe");
         agence4.put("adresse","36 rue dela 97100 Guadeloupe");
         agence4.put("siret","654656-56566262-626262");
-        agences.document("A4").set(agence4);
+        agences.document("A4").set(agence4);*/
     }
     public void addUser(){
-        CollectionReference users = db.collection("Agence").document("A1").collection("user");
+      // CollectionReference users = db.collection("Agence").document("A1").collection("user");
+       CollectionReference users=db.collection("User");
         Map<String, Object> user= new ArrayMap<>();
         user.put("nom", "Gerant1");
         user.put("prenom", "test");
         user.put("mot de passe", "test");
         user.put("mail", "test@test.fr");
 
-users.document("Gérant").set(user);
+
 
     }
 
