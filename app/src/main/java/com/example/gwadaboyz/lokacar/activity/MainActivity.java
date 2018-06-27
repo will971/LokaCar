@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        getListeAgence();
+        getListeUser();
 
 
 
@@ -49,34 +49,25 @@ public class MainActivity extends AppCompatActivity {
         agence1.put("nom","St-Herblain");
         agence1.put("adresse","123 rue moile 44200 St-Herblain");
         agence1.put("siret","456882-5558-255-5");
-
+        agences.document("User1").collection("Agence").document("A1").set(agence1);
 
         Map<String,Object> agence2 = new ArrayMap<>();
         agence2.put("nom","Orvault");
         agence2.put("adresse","52 rue poil 44300 NANTES");
         agence2.put("siret","55-555656595-22626262-162");
-
+        agences.document("User2").collection("Agence").document("A2").set(agence2);
 
         Map<String,Object> agence3 = new ArrayMap<>();
         agence3.put("nom","Nantes");
         agence3.put("adresse","233 rue lomp 44000 NANTES");
         agence3.put("siret","5555-555-55-555225-2");
-
+        agences.document("User3").collection("Agence").document("A3").set(agence3);
 
         Map<String,Object> agence4 = new ArrayMap<>();
         agence4.put("nom","Guadeloupe");
         agence4.put("adresse","36 rue dela 97100 Guadeloupe");
         agence4.put("siret","654656-56566262-626262");
-
-        agences.document("User1").collection("Agence")
-                .document("A1").set(agence1);
-        agences.document("User2").collection("Agence")
-                .document("A2").set(agence2);
-        agences.document("User3").collection("Agence")
-                .document("A3").set(agence3);
-        agences.document("User4").collection("Agence")
-                .document("A4").set(agence4);
-
+        agences.document("User4").collection("Agence").document("A4").set(agence4);
     }
     public void addUser(){
       // CollectionReference users = db.collection("Agence").document("A1").collection("user");
@@ -89,12 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     }
-public void addVehicule(){
-        CollectionReference cars = db.collection("User")
-                .document("User1").collection("Agence")
-                .document("A1").collection("Vehicule");
+public void addVehicule() {
+    CollectionReference cars = db.collection("User")
+            .document("User1").collection("Agence")
+            .document("A1").collection("Vehicule");
 
         Map<String,Object> car = new ArrayMap<>();
         car.put("Marque","BMW");
@@ -112,9 +102,34 @@ public void addVehicule(){
     car2.put("Disponible", true);
     cars.document("V2").set(car2);
 }
+    public void addClient(){
+        CollectionReference clients = db.collection("User").document("User1")
+                .collection("Agence").document("A1")
+                .collection("Clients");
+        Map<String,Object> client = new ArrayMap<>();
+        client.put("nom","Donald");
+        client.put("prenom","Marc");
+        client.put("rue","75 rue du valé");
+        client.put("ville","NANTES");
+        client.put("codePostale","44000");
+        client.put("telephone","0699002211");
+        client.put("mail","D.marc@gmail.com");
+        clients.document("Client1").set(client);
 
 
-    public void getListeAgence()
+        Map<String,Object> client2 = new ArrayMap<>();
+        client2.put("nom","Jean");
+        client2.put("prenom","Valjean");
+        client2.put("rue","12 rue duper");
+        client2.put("ville","St-Herblain");
+        client2.put("codePostale","44200");
+        client2.put("telephone","0690256598");
+        client2.put("mail","JeanValJean@gmail.com");
+        clients.document("Client2").set(client2);
+    }
+
+
+    public void getListeUser()
     {
         db.collection("User").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -125,11 +140,7 @@ public void addVehicule(){
                             addUser();
                             addAgence();
                             addVehicule();
-
-
-
-
-
+                            addClient();
                         }else
                         {
                             List<User> listUser = queryDocumentSnapshots.toObjects(User.class);
@@ -149,7 +160,5 @@ public void addVehicule(){
                     }
                 });
     }
-
-    
 
 }
