@@ -1,30 +1,26 @@
 package com.example.gwadaboyz.lokacar.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.gwadaboyz.lokacar.adapter.VehiculeAdapter;
-import com.example.gwadaboyz.lokacar.bo.Agence;
-import com.example.gwadaboyz.lokacar.bo.Vehicule;
 import com.example.gwadaboyz.lokacar.R;
+import com.example.gwadaboyz.lokacar.adapter.VehiculeAdapter;
+import com.example.gwadaboyz.lokacar.bo.Vehicule;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class VehiculeActivity extends AppCompatActivity {
@@ -60,6 +56,12 @@ public class VehiculeActivity extends AppCompatActivity {
         });
 
 
+
+        //teste a supprimer (comment recuprer l'id de l'utilisateur)
+       FirebaseUser mAuth = FirebaseAuth.getInstance().getCurrentUser();
+       String id = mAuth.getUid();
+
+       Toast.makeText(VehiculeActivity.this,id,Toast.LENGTH_LONG).show();
 
     }
 
