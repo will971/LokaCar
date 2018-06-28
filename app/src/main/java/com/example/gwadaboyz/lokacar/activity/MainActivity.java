@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.gwadaboyz.lokacar.R;
+import com.example.gwadaboyz.lokacar.bo.Agence;
 import com.example.gwadaboyz.lokacar.bo.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
 
-        getListeUser();
+        getListeAgence();
 
     }
 
@@ -98,51 +99,63 @@ public class MainActivity extends AppCompatActivity {
             CollectionReference agences = db.collection("Agences");
 
             Map<String, Object> agence1 = new ArrayMap<>();
+            String id;
+            int i=1;
+            id=""+i;
+            agence1.put("id",i);
             agence1.put("nom", "St-Herblain");
             agence1.put("adresse", "123 rue moile 44200 St-Herblain");
             agence1.put("siret", "456882-5558-255-5");
-            agences.document("A1").set(agence1);
-
+            agence1.put("Gerant","CgnCourPNwXldWv81GSyCSaZWoG3");
+            agences.document(id).set(agence1);
+            i++;
+            id=""+i;
             Map<String, Object> agence2 = new ArrayMap<>();
+            agence2.put("id",i);
             agence2.put("nom", "Orvault");
             agence2.put("adresse", "52 rue poil 44300 NANTES");
             agence2.put("siret", "55-555656595-22626262-162");
-            agences.document("A2").set(agence2);
-
+            agences.document(id).set(agence2);
+            i++;
+            id=""+i;
             Map<String, Object> agence3 = new ArrayMap<>();
+            agence3.put("id",i);
             agence3.put("nom", "Nantes");
             agence3.put("adresse", "233 rue lomp 44000 NANTES");
             agence3.put("siret", "5555-555-55-555225-2");
-            agences.document("A3").set(agence3);
+            agences.document(id).set(agence3);
+            i++;
+            id=""+i;
 
             Map<String, Object> agence4 = new ArrayMap<>();
+            agence4.put("id",i);
             agence4.put("nom", "Guadeloupe");
             agence4.put("adresse", "36 rue dela 97100 Guadeloupe");
             agence4.put("siret", "654656-56566262-626262");
-            agences.document("A4").set(agence4);
+            agences.document(id).set(agence4);
         }
         public void addVehicule () {
             CollectionReference cars = db.collection("Agences")
-                    .document("A1").collection("Vehicules");
+                    .document("1").collection("Vehicules");
 
             Map<String, Object> car = new ArrayMap<>();
-            car.put("Marque", "BMW");
-            car.put("Modele", "M3");
-            car.put("Immatriculation", "EZ-501-AB");
+            car.put("marque", "BMW");
+            car.put("modele", "M3");
+            car.put("immatriculation", "EZ-501-AB");
             car.put("kilometrage", 50000);
-            car.put("Disponible", false);
+            car.put("disponible", false);
             cars.document("V1").set(car);
 
             Map<String, Object> car2 = new ArrayMap<>();
-            car2.put("Marque", "Audi");
-            car2.put("Modele", "RS3");
-            car2.put("Immatriculation", "EG-501-AB");
+            car2.put("marque", "Audi");
+            car2.put("modele", "RS3");
+            car2.put("immatriculation", "EG-501-AB");
             car2.put("kilometrage", 75000);
-            car2.put("Disponible", true);
+            car2.put("disponible", true);
             cars.document("V2").set(car2);
         }
         public void addClient () {
-            CollectionReference clients = db.collection("Agences").document("A1")
+            CollectionReference clients = db.collection("Agences").document("1")
                     .collection("Clients");
             Map<String, Object> client = new ArrayMap<>();
             client.put("nom", "Donald");
@@ -167,10 +180,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void addLocation () {
-            CollectionReference locations = db.collection("Agences").document("A1")
+            CollectionReference locations = db.collection("Agences").document("1")
                     .collection("Locations");
-            CollectionReference clients = db.collection("Agences").document("A1").collection("Clients");
-            CollectionReference vehicules = db.collection("Agences").document("A1").collection("Vehicules");
+            CollectionReference clients = db.collection("Agences").document("1").collection("Clients");
+            CollectionReference vehicules = db.collection("Agences").document("1").collection("Vehicules");
 
             Map<String, Object> location1 = new ArrayMap<>();
 
@@ -186,8 +199,8 @@ public class MainActivity extends AppCompatActivity {
             location1.put("Montant", 500);
             locations.document("Location 1").set(location1);
         }
-        public void getListeUser () {
-            db.collection("User").get()
+        public void getListeAgence () {
+            db.collection("Agences").get()
                     .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                         @Override
                         public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -198,10 +211,10 @@ public class MainActivity extends AppCompatActivity {
                                 addClient();
                                 addLocation();
                             } else {
-                                List<User> listUser = queryDocumentSnapshots.toObjects(User.class);
-                                listUser.addAll(listUser);
+                                List<Agence> listAgence = queryDocumentSnapshots.toObjects(Agence.class);
+
                                 Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-                                Log.i("listeUser", "onSuccess: " + listUser);
+                                Log.i("listeAgence", "onSuccess: " + listAgence);
                             }
 
                         }
