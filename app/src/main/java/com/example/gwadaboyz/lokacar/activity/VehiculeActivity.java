@@ -61,7 +61,6 @@ public class VehiculeActivity extends AppCompatActivity {
        FirebaseUser mAuth = FirebaseAuth.getInstance().getCurrentUser();
        String id = mAuth.getUid();
 
-       Toast.makeText(VehiculeActivity.this,id,Toast.LENGTH_LONG).show();
 
     }
 
@@ -75,7 +74,6 @@ public class VehiculeActivity extends AppCompatActivity {
 
                         } else {
                             List<Vehicule> voitures = queryDocumentSnapshots.toObjects(Vehicule.class);
-                            Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                             Log.i("Liste voitures", "onSuccess: " + voitures);
                             listener.onGetVoiture(voitures);
                         }
