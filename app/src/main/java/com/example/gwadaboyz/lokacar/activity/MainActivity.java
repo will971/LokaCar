@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         getListeUser();
 
-
     }
 
     @Override
@@ -50,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
         if (currentUser != null) {
             Intent intent = new Intent(this, MenuActivity.class);
             startActivity(intent);
+
         }
+
     }
 
         public void connexion ( final View view){
