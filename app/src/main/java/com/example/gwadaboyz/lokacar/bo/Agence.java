@@ -4,13 +4,13 @@ import java.util.UUID;
 
 public class Agence {
 
-    private UUID id;
+    private int id;
     private String nom;
     private String adresse;
     private String siret;
 
 
-    public Agence(UUID id, String nom, String adresse, String siret) {
+    public Agence(int id, String nom, String adresse, String siret) {
         this.id = id;
         this.nom = nom;
         this.adresse = adresse;
@@ -21,11 +21,11 @@ public class Agence {
         super();
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

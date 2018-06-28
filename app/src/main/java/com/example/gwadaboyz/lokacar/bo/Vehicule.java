@@ -4,7 +4,7 @@ public class Vehicule {
 
     private int id;
     private String marque;
-    private String imamatriculation;
+    private String imatriculation;
     private boolean statut;
     private int prix;
     private Agence agence;
@@ -27,12 +27,12 @@ public class Vehicule {
         this.marque = marque;
     }
 
-    public String getImamatriculation() {
-        return imamatriculation;
+    public String getImatriculation() {
+        return imatriculation;
     }
 
-    public void setImamatriculation(String imamatriculation) {
-        this.imamatriculation = imamatriculation;
+    public void setImatriculation(String imatriculation) {
+        this.imatriculation = imatriculation;
     }
 
     public boolean isStatut() {
@@ -70,11 +70,11 @@ public class Vehicule {
         this.modele = modele;
     }
 
-    public Vehicule(int id, String marque, String imamatriculation, boolean statut,
+    public Vehicule(int id, String marque, String imatriculation, boolean statut,
                     int prix, Agence agence, String modele) {
         this.id = id;
         this.marque = marque;
-        this.imamatriculation = imamatriculation;
+        this.imatriculation = imatriculation;
         this.statut = statut;
         this.prix = prix;
         this.agence = agence;
@@ -86,7 +86,7 @@ public class Vehicule {
         return "Vehicule{" +
                 "id=" + id +
                 ", marque='" + marque + '\'' +
-                ", imamatriculation='" + imamatriculation + '\'' +
+                ", imatriculation='" + imatriculation + '\'' +
                 ", statut=" + statut +
                 ", prix=" + prix +
                 ", agence=" + agence +

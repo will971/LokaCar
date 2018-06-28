@@ -31,14 +31,14 @@ public class LocationActivity extends AppCompatActivity {
 
         Vehicule v1= new Vehicule();
         v1.setModele("M3 2018");
-        v1.setImamatriculation("ek-509-vn");
+        v1.setImatriculation("ek-509-vn");
         v1.setMarque("BMW");
         v1.setPrix(500);
         v1.setStatut(true);
 
         Vehicule v2= new Vehicule();
         v2.setModele("M3 2015");
-        v2.setImamatriculation("ea-410-ez");
+        v2.setImatriculation("ea-410-ez");
         v2.setMarque("BMW");
         v2.setPrix(500);
         v2.setStatut(true);
