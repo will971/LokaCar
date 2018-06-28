@@ -32,32 +32,30 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Marque"
-        app:layout_constraintBottom_toBottomOf="@+id/editText6"
-        app:layout_constraintEnd_toStartOf="@+id/editText6"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextMarqueVehicule"
+        app:layout_constraintEnd_toStartOf="@+id/editTextMarqueVehicule"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText6" />
+        app:layout_constraintTop_toTopOf="@+id/editTextMarqueVehicule" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/editTextMarqueVehicule"
         android:layout_width="218dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/editTextModelVehicule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextMarqueVehicule" />
 
     <TextView
         android:id="@+id/textView9"
@@ -67,10 +65,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Modèle"
-        app:layout_constraintBottom_toBottomOf="@+id/editText9"
-        app:layout_constraintEnd_toStartOf="@+id/editText9"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextModelVehicule"
+        app:layout_constraintEnd_toStartOf="@+id/editTextModelVehicule"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText9" />
+        app:layout_constraintTop_toTopOf="@+id/editTextModelVehicule" />
 
     <TextView
         android:id="@+id/textView10"
@@ -81,21 +79,20 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Immatriculation"
-        app:layout_constraintBottom_toBottomOf="@+id/editText10"
-        app:layout_constraintEnd_toStartOf="@+id/editText10"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextImmatriculationVehicule"
+        app:layout_constraintEnd_toStartOf="@+id/editTextImmatriculationVehicule"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText10" />
+        app:layout_constraintTop_toTopOf="@+id/editTextImmatriculationVehicule" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/editTextImmatriculationVehicule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextModelVehicule" />
 
     <TextView
         android:id="@+id/textView11"
@@ -105,14 +102,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Etat"
-        app:layout_constraintBottom_toBottomOf="@+id/switch1"
+        app:layout_constraintBottom_toBottomOf="@+id/switchEtatVehicule"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/switch1"
+        app:layout_constraintTop_toTopOf="@+id/switchEtatVehicule"
         app:layout_constraintVertical_bias="0.0" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switchEtatVehicule"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginStart="8dp"
@@ -122,8 +119,8 @@
         android:textOff="loué"
         android:textOn="Disponible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editText10"
-        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        app:layout_constraintStart_toStartOf="@+id/editTextImmatriculationVehicule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextImmatriculationVehicule"
         tools:checked="true" />
 
     <TextView
@@ -134,31 +131,32 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Prix"
-        app:layout_constraintBottom_toBottomOf="@+id/editText12"
-        app:layout_constraintEnd_toStartOf="@+id/editText12"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPrixVehicule"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPrixVehicule"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText12" />
+        app:layout_constraintTop_toTopOf="@+id/editTextPrixVehicule" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonAjouterVehicule"
         android:layout_width="87dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Button"
+        android:text="Ajouter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="addVehicule"/>
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/editTextPrixVehicule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintTop_toBottomOf="@+id/switchEtatVehicule" />
 
 </android.support.constraint.ConstraintLayout>
