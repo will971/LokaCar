@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.gwadaboyz.lokacar.R;
-import com.example.gwadaboyz.lokacar.bo.Agence;
 import com.example.gwadaboyz.lokacar.bo.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -71,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("connexion", "signInWithEmail:failure", task.getException());
+                                Toast.makeText(MainActivity.this,"Identifiant ou mot de passe invalide",Toast.LENGTH_LONG).show();
                             }
 
                             // ...
