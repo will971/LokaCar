@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VehiculeActivity extends AppCompatActivity {
-    private FirebaseAuth mAuth;
+
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     CollectionReference agences= db.collection("Agences");
@@ -90,15 +90,7 @@ public class VehiculeActivity extends AppCompatActivity {
                 });
 
     }
-    //useless
-/*
-    public List<Vehicule> getListVehicule(){
 
-        agences.whereEqualTo("Gerant", mAuth.getCurrentUser().getUid()).get().addOnSuccessListener();
-
-      return null ;
-    }
-*/
 
 
     public void OnClickAddVehicule(View view){

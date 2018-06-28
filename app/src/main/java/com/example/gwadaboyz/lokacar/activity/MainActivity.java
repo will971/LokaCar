@@ -135,10 +135,13 @@ public class MainActivity extends AppCompatActivity {
             agences.document(id).set(agence4);
         }
         public void addVehicule () {
+            CollectionReference agence=db.collection("Agence");
             CollectionReference cars = db.collection("Agences")
                     .document("1").collection("Vehicules");
 
             Map<String, Object> car = new ArrayMap<>();
+
+
             car.put("marque", "BMW");
             car.put("modele", "M3");
             car.put("immatriculation", "EZ-501-AB");
