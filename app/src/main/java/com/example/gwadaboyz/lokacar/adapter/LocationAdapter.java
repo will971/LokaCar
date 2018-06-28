@@ -32,7 +32,7 @@ public LocationAdapter(List<Location> locations){
 
 
 
-holder.textViewID.setText("N° : "+locations.get(position).getId());
+//holder.textViewID.setText("N° : "+locations.get(position).getId());
 holder.textViewClient.setText("Nom du client : "+locations.get(position).getClient().getNom());
 holder.textViewVehicule.setText("Modele du Véhicule : "+locations.get(position).getVehicule().getModele());
 holder.textViewMontant.setText("Montant de la location : "+locations.get(position).getMontant()+" €");

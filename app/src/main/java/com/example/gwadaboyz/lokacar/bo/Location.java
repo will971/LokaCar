@@ -28,8 +28,19 @@ public class Location {
         this.rendu = rendu;
     }
 
-
-    //Get et Set
+    @Override
+    public String toString() {
+        return "Location{" +
+                "id=" + id +
+                ", client=" + client +
+                ", vehicule=" + vehicule +
+                ", date_début=" + date_début +
+                ", date_fin=" + date_fin +
+                ", montant=" + montant +
+                ", rendu=" + rendu +
+                '}';
+    }
+//Get et Set
 
     public int getId() {
         return id;

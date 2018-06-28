@@ -110,4 +110,18 @@ public class Client {
     public void setMail(String mail) {
         this.mail = mail;
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", rue='" + rue + '\'' +
+                ", ville='" + ville + '\'' +
+                ", codePostal='" + codePostal + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", mail='" + mail + '\'' +
+                '}';
+    }
 }

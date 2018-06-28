@@ -195,11 +195,11 @@ public class MainActivity extends AppCompatActivity {
             SimpleDateFormat formater = new SimpleDateFormat("dd-MM-yy");
 
             formater.format(ddf);
-            location1.put("Client", clients.document("Client1"));
-            location1.put("Vehicule", vehicules.document("V1"));
-            location1.put("Date début", ddb);
-            location1.put("Date fin", ddf);
-            location1.put("Montant", 500);
+            location1.put("client", clients.document("Client1"));
+            location1.put("vehicule", vehicules.document("V1"));
+            location1.put("date_debut", ddb);
+            location1.put("date_fin", ddf);
+            location1.put("montant", 500);
             locations.document("Location 1").set(location1);
         }
         public void getListeAgence () {
