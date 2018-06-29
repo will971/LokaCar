@@ -95,7 +95,6 @@ public class VehiculeActivity extends AppCompatActivity {
 
                         } else {
                             List<Vehicule> voitures = queryDocumentSnapshots.toObjects(Vehicule.class);
-                            Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                             Log.i("Liste voitures", "onSuccess: " + voitures);
                             listener.onGetVoiture(voitures);
                         }

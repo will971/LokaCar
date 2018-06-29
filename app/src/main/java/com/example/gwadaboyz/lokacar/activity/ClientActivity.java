@@ -64,7 +64,6 @@ public class ClientActivity extends AppCompatActivity {
 
                         } else {
                             List<Client> consumers = queryDocumentSnapshots.toObjects(Client.class);
-                            Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                             Log.i("Liste client", "onSuccess: " + consumers);
                             listener.onGetClient(consumers);
                         }

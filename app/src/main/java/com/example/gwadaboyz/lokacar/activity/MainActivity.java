@@ -215,8 +215,6 @@ public class MainActivity extends AppCompatActivity {
                                 addLocation();
                             } else {
                                 List<Agence> listAgence = queryDocumentSnapshots.toObjects(Agence.class);
-
-                                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                                 Log.i("listeAgence", "onSuccess: " + listAgence);
                             }
 
