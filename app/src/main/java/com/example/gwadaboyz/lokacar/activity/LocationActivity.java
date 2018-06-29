@@ -78,7 +78,7 @@ public class LocationActivity extends AppCompatActivity {
 
                                 final Location location = new Location();
                                 Client c = null;
-                                DocumentReference refVoiture = ((DocumentReference) qds.get("vehicule"));
+                                final DocumentReference refVoiture = ((DocumentReference) qds.get("vehicule"));
                                 DocumentReference refClient = ((DocumentReference) qds.get("client"));
                                 final Date datedebut = ((Date) qds.get("date_debut"));
                                 final Date datefin = ((Date) qds.get("date_fin"));
@@ -89,13 +89,11 @@ public class LocationActivity extends AppCompatActivity {
 
                                 // Type typeToken = new TypeToken<Client>() { }.getType();
                                 //  Client c = new Gson().fromJson( refClient.getPath(), typeToken);
-                                String separateur = "/";
-                                final String path1[] = refClient.getPath().toString().split(separateur);
-                                final String path2[] = refVoiture.getPath().toString().split(separateur);
+                                
 
-                                Task<DocumentSnapshot> ds = db.collection(path1[0]).document(path1[1]).collection(path1[2]).document(path1[3]).get();
-                                // location.setClient();
-                                // location.setVehicule();
+
+                                Task<DocumentSnapshot> ds = refClient.get() /*db.collection(path1[0]).document(path1[1]).collection(path1[2]).document(path1[3]).get()*/;
+
 
                                 ds.addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                     @Override
@@ -104,7 +102,7 @@ public class LocationActivity extends AppCompatActivity {
 
                                         final Client c = documentSnapshot.toObject(Client.class);
                                         Log.i("Client", c.toString());
-                                        Task<DocumentSnapshot> ds2 = db.collection(path2[0]).document(path2[1]).collection(path2[2]).document(path2[3]).get();
+                                        Task<DocumentSnapshot> ds2 = refVoiture.get();
                                         ds2.addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                             @Override
                                             public void onSuccess(DocumentSnapshot documentSnapshot) {
