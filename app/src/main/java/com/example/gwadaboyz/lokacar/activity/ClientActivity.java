@@ -35,7 +35,7 @@ public class ClientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client);
 
-        final RecyclerView rcv = (RecyclerView)findViewById(R.id.liste_Client);
+        final RecyclerView rcv = findViewById(R.id.liste_Client);
         rcv.setHasFixedSize(true);
 
         LinearLayoutManager llmg = new LinearLayoutManager(this);

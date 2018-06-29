@@ -13,12 +13,15 @@ import android.widget.Toast;
 import com.example.gwadaboyz.lokacar.R;
 import com.example.gwadaboyz.lokacar.adapter.VehiculeAdapter;
 import com.example.gwadaboyz.lokacar.bo.Vehicule;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.List;
@@ -61,7 +64,24 @@ public class VehiculeActivity extends AppCompatActivity {
        FirebaseUser mAuth = FirebaseAuth.getInstance().getCurrentUser();
        String id = mAuth.getUid();
 
-       Toast.makeText(VehiculeActivity.this,id,Toast.LENGTH_LONG).show();
+        db.collection("Agences")
+                .whereEqualTo("Gerant", id)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d("agence retrouvé", document.getId() + " => " + document.getData());
+                            }
+                        } else {
+                            Log.d("agence non retrouvé", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+
+        Toast.makeText(VehiculeActivity.this,id,Toast.LENGTH_LONG).show();
 
     }
 
